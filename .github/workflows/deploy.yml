@@ -35,10 +35,10 @@ jobs:
           cache: 'npm'
           
       - name: Install dependencies
-        run: npm ci
+        run: npm i
         
       - name: Build React app
-        run: npm run build
+        run: npx react-scripts build
         env:
           # Add any environment variables your build needs
           CI: false
