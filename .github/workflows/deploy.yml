@@ -38,7 +38,7 @@ jobs:
         run: npm i
         
       - name: Build React app
-        run: npx react-scripts build
+        run: npm run build
         env:
           # Add any environment variables your build needs
           CI: false
