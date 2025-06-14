@@ -83,7 +83,7 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="text-lg font-medium mb-1">Connect</h4>
                     <div className="flex space-x-4">
-                      <a href="https://linkedin.com/in/Akash-Choudhary" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors">LinkedIn</a>
+                      <a href="https://www.linkedin.com/in/akash-choudhary-29a451289/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors">LinkedIn</a>
                       <a href="https://www.akash-choudhary.tech" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors">Portfolio</a>
                     </div>
                   </div>
