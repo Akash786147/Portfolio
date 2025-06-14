@@ -17,35 +17,41 @@ const Skills: React.FC = () => {
   
   const skills: Skill[] = [
     // Frontend
-    { name: 'React', icon: '⚛️', level: 9, category: 'frontend' },
+    { name: 'Flutter', icon: '📱', level: 9, category: 'frontend' },
+    { name: 'React Native', icon: '⚛️', level: 7, category: 'frontend' },
+    { name: 'JavaScript', icon: '📜', level: 8, category: 'frontend' },
     { name: 'TypeScript', icon: '📘', level: 8, category: 'frontend' },
-    { name: 'JavaScript', icon: '📜', level: 9, category: 'frontend' },
-    { name: 'HTML/CSS', icon: '🎨', level: 8, category: 'frontend' },
-    { name: 'Tailwind CSS', icon: '💨', level: 9, category: 'frontend' },
-    { name: 'Three.js', icon: '🧊', level: 7, category: 'frontend' },
+    { name: 'Expo', icon: '🚀', level: 8, category: 'frontend' },
     
     // Backend
-    { name: 'Node.js', icon: '🟢', level: 7, category: 'backend' },
-    { name: 'Express', icon: '🚄', level: 7, category: 'backend' },
+    { name: 'Node.js', icon: '🟢', level: 8, category: 'backend' },
+    { name: 'Python', icon: '🐍', level: 8, category: 'backend' },
+    { name: 'Java', icon: '☕', level: 7, category: 'backend' },
+    { name: 'C++', icon: '⚡', level: 7, category: 'backend' },
+    { name: 'PostgreSQL', icon: '🐘', level: 8, category: 'backend' },
     { name: 'MongoDB', icon: '🍃', level: 7, category: 'backend' },
-    { name: 'PostgreSQL', icon: '🐘', level: 6, category: 'backend' },
+    { name: 'MySQL', icon: '🗄️', level: 7, category: 'backend' },
+    { name: 'Firebase', icon: '🔥', level: 8, category: 'backend' },
+    { name: 'Supabase', icon: '⚡', level: 8, category: 'backend' },
+    { name: 'Drizzle', icon: '💧', level: 7, category: 'backend' },
     
     // Design
-    { name: 'Figma', icon: '🖌️', level: 8, category: 'design' },
-    { name: 'UI/UX', icon: '👁️', level: 8, category: 'design' },
-    { name: 'Animation', icon: '✨', level: 8, category: 'design' },
+    { name: 'Figma', icon: '🖌️', level: 7, category: 'design' },
+    { name: 'Canva', icon: '🎨', level: 8, category: 'design' },
     
     // Tools
-    { name: 'Git', icon: '📑', level: 8, category: 'tools' },
-    { name: 'Docker', icon: '🐳', level: 6, category: 'tools' },
     { name: 'VS Code', icon: '💻', level: 9, category: 'tools' },
+    { name: 'Github', icon: '📑', level: 8, category: 'tools' },
+    { name: 'Vercel', icon: '▲', level: 7, category: 'tools' },
+    { name: 'Netlify', icon: '🌐', level: 7, category: 'tools' },
+    { name: 'Google Play Console', icon: '🏪', level: 7, category: 'tools' },
   ];
   
   const categories = [
-    { id: 'frontend', name: 'Frontend Development' },
-    { id: 'backend', name: 'Backend Development' },
-    { id: 'design', name: 'Design' },
-    { id: 'tools', name: 'Tools & Workflow' },
+    { id: 'frontend', name: 'Mobile Development' },
+    { id: 'backend', name: 'Backend & Languages' },
+    { id: 'design', name: 'Design Tools' },
+    { id: 'tools', name: 'Development Tools' },
   ];
   
   return (

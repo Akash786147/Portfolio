@@ -1,4 +1,3 @@
-import React, { useState, FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -7,50 +6,6 @@ const Contact: React.FC = () => {
     threshold: 0.1,
     triggerOnce: true
   });
-  
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-  
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      
-      // Reset submission status after a delay
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 5000);
-    }, 1500);
-  };
-  
-  const inputClasses = "w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300";
   
   return (
     <section id="contact" className="section bg-gradient-to-b from-dark/95 to-dark relative">
@@ -73,111 +28,13 @@ const Contact: React.FC = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Have a project in mind or want to work together? Feel free to reach out.
-            I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+            Have a project in mind or want to collaborate? Feel free to reach out.
+            I'm always open to discussing new opportunities, innovative projects, and ways to contribute to impactful software solutions.
           </p>
         </motion.div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.7 }}
-          >
-            <div className="glass-card p-8">
-              {submitted ? (
-                <motion.div 
-                  className="text-center py-8"
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="text-4xl mb-4 text-primary">✓</div>
-                  <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
-                  <p className="text-gray-300">Thank you for reaching out. I'll get back to you as soon as possible.</p>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit}>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">Your Name</label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        className={inputClasses}
-                        placeholder="John Doe"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">Your Email</label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        className={inputClasses}
-                        placeholder="john@example.com"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">Subject</label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleChange}
-                      required
-                      className={inputClasses}
-                      placeholder="Project Inquiry"
-                    />
-                  </div>
-                  
-                  <div className="mb-6">
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                      rows={5}
-                      className={inputClasses}
-                      placeholder="Hello, I'd like to talk about..."
-                    ></textarea>
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className={`btn btn-primary w-full flex justify-center items-center ${isSubmitting ? 'opacity-80' : ''}`}
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                        </svg>
-                        Sending...
-                      </>
-                    ) : (
-                      'Send Message'
-                    )}
-                  </button>
-                </form>
-              )}
-            </div>
-          </motion.div>
-          
+
           {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -188,7 +45,7 @@ const Contact: React.FC = () => {
               <div>
                 <h3 className="text-2xl font-bold mb-4">Contact Information</h3>
                 <p className="text-gray-300 mb-8">
-                  Feel free to reach out through any of these channels. I'm always interested in hearing about new projects and opportunities.
+                  Let's connect! I'm always interested in discussing new opportunities, collaborating on innovative projects, and contributing to meaningful software solutions.
                 </p>
               </div>
               
@@ -201,7 +58,19 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-medium mb-1">Email</h4>
-                    <a href="mailto:contact@example.com" className="text-gray-300 hover:text-primary transition-colors">contact@example.com</a>
+                    <a href="mailto:akashkumar786147@gmail.com" className="text-gray-300 hover:text-primary transition-colors">akashkumar786147@gmail.com</a>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="bg-white/5 p-3 rounded-lg mr-4">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-medium mb-1">Phone</h4>
+                    <a href="tel:+918298120104" className="text-gray-300 hover:text-primary transition-colors">+91 8298120104</a>
                   </div>
                 </div>
                 
@@ -212,11 +81,10 @@ const Contact: React.FC = () => {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium mb-1">Social Media</h4>
+                    <h4 className="text-lg font-medium mb-1">Connect</h4>
                     <div className="flex space-x-4">
-                      <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors">GitHub</a>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors">LinkedIn</a>
-                      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors">Twitter</a>
+                      <a href="https://linkedin.com/in/Akash-Choudhary" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors">LinkedIn</a>
+                      <a href="https://www.akash-choudhary.tech" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary transition-colors">Portfolio</a>
                     </div>
                   </div>
                 </div>
@@ -230,7 +98,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-medium mb-1">Location</h4>
-                    <p className="text-gray-300">New York, NY, United States</p>
+                    <p className="text-gray-300">Bokaro Steel City, Jharkhand, India</p>
                   </div>
                 </div>
               </div>

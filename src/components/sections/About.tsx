@@ -9,8 +9,8 @@ const About: React.FC = () => {
   });
 
   const skills = [
-    "React", "TypeScript", "Three.js", "GSAP", 
-    "Framer Motion", "Tailwind CSS", "Node.js"
+    "Flutter", "React Native", "Node.js", "Python", 
+    "Java", "JavaScript", "TypeScript", "PostgreSQL"
   ];
 
   return (
@@ -36,8 +36,11 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="aspect-square max-w-md mx-auto overflow-hidden rounded-2xl border-4 border-white/10 shadow-2xl">
                 <div className="w-full h-full bg-gradient-to-br from-primary/40 to-secondary/40 flex items-center justify-center">
-                  {/* Replace with actual image when available */}
-                  <span className="text-6xl text-white/50">🧑‍💻</span>
+                  <img 
+                    src="/logo192.png"
+                    alt="Akash Choudhary"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
                 </div>
               </div>
               
@@ -71,8 +74,9 @@ const About: React.FC = () => {
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              I'm a passionate developer and designer with expertise in creating immersive web experiences. 
-              With a background in both design and development, I bridge the gap between aesthetics and functionality.
+              I'm a B.Tech Computer Science student at Bml Munjal University with a CGPA of 8.55. 
+              My expertise lies in full-stack mobile development, with hands-on experience in Flutter, React Native, 
+              and backend technologies including Node.js and PostgreSQL.
             </motion.p>
             
             <motion.p 
@@ -81,9 +85,9 @@ const About: React.FC = () => {
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              My goal is to build digital experiences that are not only visually appealing but also 
-              performant, accessible, and user-friendly. I'm constantly exploring new technologies and techniques 
-              to push the boundaries of what's possible on the web.
+              Currently working as a Backend Engineer at UniSphere and have contributed to multiple startups 
+              including USTART and AroundYou. I'm passionate about building scalable software solutions and 
+              constantly learning new technologies to contribute to impactful software products.
             </motion.p>
             
             <motion.div
@@ -92,7 +96,7 @@ const About: React.FC = () => {
               animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <h3 className="text-xl font-semibold mb-4">Technical Skills</h3>
+              <h3 className="text-xl font-semibold mb-4">Key Technologies</h3>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill, index) => (
                   <span 

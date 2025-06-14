@@ -32,8 +32,8 @@ function App() {
     document.head.appendChild(linkPoppins);
     
     // Set page title
-    document.title = 'Portfolio | Creative Developer';
-    
+    document.title = 'Portfolio - Akash Choudhary';
+
     // Clean up
     return () => {
       document.head.removeChild(linkInter);

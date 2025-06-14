@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl md:text-2xl font-light text-primary mb-4"
           >
-            Welcome to my portfolio
+            Hello, I'm Akash Choudhary
           </motion.h2>
           
           <motion.h1
@@ -59,7 +59,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text"
           >
-            Creative Developer & Designer
+            Software Engineer
           </motion.h1>
           
           <motion.p
@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-lg md:text-xl text-gray-300 mb-8"
           >
-            I build immersive digital experiences with cutting-edge technologies and stunning visual designs
+            Aspiring Software Engineer with experience in full-stack mobile development, seeking opportunities to contribute to impactful software products while deepening backend and systems knowledge.
           </motion.p>
           
           <motion.div

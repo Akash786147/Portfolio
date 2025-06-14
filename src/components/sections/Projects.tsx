@@ -20,26 +20,26 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A fully responsive e-commerce platform with product filtering, cart functionality, and payment integration.",
-      image: "https://via.placeholder.com/600x400/252934/FFFFFF?text=E-Commerce+Project",
-      tags: ["React", "Node.js", "MongoDB", "Stripe"],
+      title: "Savera App - Club Management System",
+      description: "An app for a university charity club that teaches village children. Features include daily attendance, study progress tracking, learning material uploads, and end-to-end management of club activities.",
+      image: "/savera.png",
+      tags: ["Flutter", "Firebase", "Dart", "Mobile"],
       link: "#"
     },
     {
       id: 2,
-      title: "3D Product Configurator",
-      description: "Interactive 3D product configurator allowing users to customize and visualize products in real-time.",
-      image: "https://via.placeholder.com/600x400/252934/FFFFFF?text=3D+Configurator",
-      tags: ["Three.js", "React", "WebGL", "GSAP"],
+      title: "Data Insight Software",
+      description: "A Flutter + Flask based tool that allows non-coders to perform deep data analysis. Helps extract actionable insights from datasets through intuitive UI and intelligent backend logic.",
+      image: "/analytics.png",
+      tags: ["Flutter", "Flask", "Python", "Data Analytics"],
       link: "#"
     },
     {
       id: 3,
-      title: "Dashboard UI",
-      description: "Modern dashboard interface with data visualization, real-time updates and responsive design.",
-      image: "https://via.placeholder.com/600x400/252934/FFFFFF?text=Dashboard+UI",
-      tags: ["React", "TypeScript", "D3.js", "Tailwind"],
+      title: "CharitEase - Social Cause App",
+      description: "Winner of 1st Position at Innoquest Hackathon at Microsoft, Gurgaon. A social cause-based application that connects donors with charitable organizations and tracks impact.",
+      image: "/charitease.png",
+      tags: ["React Native", "Node.js", "MongoDB", "Social Impact"],
       link: "#"
     },
   ];
@@ -78,8 +78,8 @@ const Projects: React.FC = () => {
             </span>
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Check out some of my recent work. Each project represents a unique challenge 
-            and showcases different skills and technologies.
+            Here are some of my key projects that demonstrate my skills in mobile development, 
+            data analytics, and social impact applications.
           </p>
         </motion.div>
         
